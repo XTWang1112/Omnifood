@@ -24,12 +24,13 @@ Paragraph default: 1.6
 
 - Primary: #e67e22 #51cf66 #94d82d #ffd43b
 
-- Tints: #fdf2e9 #fae5de
-- Shades: #cf711f
+- Tints: #fdf2e9 #fae5de #eb984e
+- Shades: #cf711f #45260a
 - Accents:
-- Greys  #888 #555 #333 #6F6F6F
+- Greys  #888 #555 #333 #6F6F6F #aaa
 
 ----05 SHADOWS
+ box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 ----06 BORDER-RADIUS
 Default: 9px
@@ -93,6 +94,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5--cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
   align-items: center;
 }
@@ -133,6 +138,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -142,6 +148,11 @@ body {
   border-radius: 9px;
   transition: all 0.3s;
   font-weight: 600;
+
+  /* Only for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -167,6 +178,18 @@ body {
   background-color: #fdf2e9;
   /* border: 3px solid white; */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: white;
+  color: #555;
 }
 
 .link:link,
@@ -203,6 +226,11 @@ body {
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /*helper class*/
